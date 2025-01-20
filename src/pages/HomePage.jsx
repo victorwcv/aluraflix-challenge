@@ -1,7 +1,15 @@
 import CustomCategory from "../components/CustomCategory";
 import CustomTitleTag from "../components/CustomTitleTag";
+import { useStore } from "../store/store";
 
 const HomePage = () => {
+
+  const { state, dispatch } = useStore();
+
+  const frontend = state.data?.filter((video) => video.category === "frontend");
+  const backend = state.data?.filter((video) => video.category === "backend");
+  const innovation = state.data?.filter((video) => video.category === "innovation_and_management");
+  
   return (
     <div className="home-page__container">
 
@@ -33,13 +41,13 @@ const HomePage = () => {
       </section>
 
       <section className="home-page__categories">
-        <CustomCategory>
+        <CustomCategory videos={frontend}>
           <CustomTitleTag title="FRONT END" color="primary" />
         </CustomCategory>
-        <CustomCategory>
+        <CustomCategory videos={backend}>
           <CustomTitleTag title="BACK END" color="secondary" />
         </CustomCategory>
-        <CustomCategory>
+        <CustomCategory videos={innovation}>
           <CustomTitleTag title="INNOVACIÓN Y GESTIÓN" color="tertiary" />
         </CustomCategory>
       </section>

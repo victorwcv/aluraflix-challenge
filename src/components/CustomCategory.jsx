@@ -1,4 +1,7 @@
-const CustomCategory = ({ children,  videos }) => {
+import { FaTrashAlt } from "react-icons/fa";
+import { FaEdit } from "react-icons/fa";
+
+const CustomCategory = ({ children, videos }) => {
   return (
     <div className="category__container">
       <div className="category__title">{children}</div>
@@ -7,8 +10,8 @@ const CustomCategory = ({ children,  videos }) => {
           return (
             <div className="video__container">
               <iframe
-                width="560"
-                height="315"
+                width="350"
+                height="200"
                 src={video.link}
                 title="YouTube video player"
                 frameborder="0"
@@ -18,8 +21,13 @@ const CustomCategory = ({ children,  videos }) => {
               ></iframe>
 
               <div className="video__buttons">
-                <button className="video__btn">Borrar</button>
-                <button className="video__btn">Editar</button>
+                <button className="video__btn">
+                  <FaTrashAlt /> Borrar
+                </button>
+                <button className="video__btn">
+                  <FaEdit />
+                  Editar
+                </button>
               </div>
             </div>
           );

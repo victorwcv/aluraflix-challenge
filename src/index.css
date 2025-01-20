@@ -57,6 +57,9 @@
 
 /* home page */
 
+
+/* banner section */
+
 .home-page__container {
   max-width: 1440px;
   margin-inline: auto;
@@ -113,6 +116,55 @@
 
 .banner__text small {
   font-size: 1rem;
+}
+
+/* videos section */
+
+.home-page__categories {
+  padding: 0 2rem;
+}
+
+.category__container {
+  margin-block: 4rem;
+}
+
+.category__title {
+  margin-bottom: 1rem;
+}
+
+.category__videos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.video__container {
+  background-color: var(--black);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.video__buttons {
+  display: flex;
+}
+
+.video__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--white);
+}
+
+.video__btn:hover {
+  color:#ffba05;
 }
 
 

@@ -1,21 +1,19 @@
-import React, { createContext, useContext, useReducer } from 'react';
+import React, { createContext, useContext, useReducer } from "react";
 
 // Estado inicial
 const initialState = {
-  user: null, 
-  isAuthenticated: false, 
+  data: null,
 };
 
 // Reducer para manejar las acciones
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'LOGIN':
+    case "SET_DATA":
       return {
         ...state,
-        user: action.payload,
-        isAuthenticated: true,
+        data: action.payload,
       };
-    case 'LOGOUT':
+    case "LOGOUT":
       return {
         ...state,
         user: null,
@@ -33,18 +31,14 @@ const StoreContext = createContext();
 export const StoreProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  return (
-    <StoreContext.Provider value={{ state, dispatch }}>
-      {children}
-    </StoreContext.Provider>
-  );
+  return <StoreContext.Provider value={{ state, dispatch }}>{children}</StoreContext.Provider>;
 };
 
 // Hook para usar el contexto en componentes
 export const useStore = () => {
   const context = useContext(StoreContext);
   if (!context) {
-    throw new Error('useStore debe usarse dentro de un StoreProvider');
+    throw new Error("useStore debe usarse dentro de un StoreProvider");
   }
   return context;
 };
