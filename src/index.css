@@ -8,6 +8,8 @@
 :root {
   --primary: #262626;
   --secondary: #2271d1;
+  --dark-blue: #03122F;
+  --dark-blue-transparent: #03122fa4;
   --dark: #1c1c1c;
   --white: #fff;
   --black: #000;
@@ -85,7 +87,7 @@
 .banner__content {
   position: relative;
   height: 100%;
-  background: #00123396;
+  background: var(--dark-blue-transparent);
   display: grid;
   grid-template-columns: repeat(2, minmax(400px, 1fr));
   gap: 5rem;
@@ -240,4 +242,134 @@
 
 .title-tag.tertiary {
   background-color: #ffba05;
+}
+
+/* Edit Card Modal */
+
+.edit-card-modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100VW;
+  height: 100vh;
+  background: var(--dark-blue-transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.edit-card-modal__container {
+  position: relative;
+  width: 500px;
+  background-color: var(--dark);
+  padding: 2rem 4rem;
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; 
+  border : 3px solid var(--secondary);
+}
+
+.edit-card-modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: var(--white);
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.edit-card-modal__close:hover {
+  box-shadow: 0 0 10px var(--white);
+}
+
+.edit-card-modal__container h1 {
+  color: var(--secondary);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.edit-card-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.form-field__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.form-field__container label {
+  color: var(--white);
+}
+
+.form-field__container input,
+.form-field__container select,
+.form-field__container textarea {
+  padding: .5rem .75rem;
+  border-radius: .5rem;
+  border: 1px solid var(--secondary);
+  outline: none;
+  background-color: transparent;
+  color: var(--white);
+}
+
+.form-field__container input::placeholder,
+.form-field__container textarea::placeholder {
+  color: var(--white);
+  opacity: .4;
+}
+
+.form-field__container input:focus,
+.form-field__container select:focus,
+.form-field__container textarea:focus {
+  border: 1px solid var(--secondary);
+  box-shadow: 0 0 10px var(--secondary);
+}
+
+.form-field__container textarea {
+  resize: none;
+  height: 100px;
+}
+
+.edit-card-modal__buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.edit-card-modal__buttons button {
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  border: 2px solid var(--secondary);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--secondary);
+}
+
+.edit-card-modal__buttons button:hover {
+  box-shadow: 0 0 10px var(--white);
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.form-field__container select option {
+  color: var(--black);
 }
