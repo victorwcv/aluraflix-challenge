@@ -4,24 +4,33 @@ import { FaEdit } from "react-icons/fa";
 import EditCardModal from "./EditCardModal";
 import { useStore } from "../store/store";
 import { deleteVideo } from "../services/videos.service";
+import { ToastContainer, toast } from 'react-toastify';
 
 const VideoCard = ({ video }) => {
   const [showModal, setShowModal] = useState(false);
 
   const { dispatch } = useStore();
 
+  const successNotify = () => toast.success("Video eliminado con exito!");
+  const errorNotify = () => toast.error("Error al eliminar el video!");
+
   const onDelete = async (id) => {
     try {
       const data = await deleteVideo(id);
       dispatch({ type: "DELETE_VIDEO", payload: id });
       console.log(data);
+      successNotify();
     } catch (error) {
       console.log(error);
+      errorNotify();
     }
   };
   
   return (
     <div className="video__container">
+
+      <ToastContainer autoClose={5000} closeOnClick pauseOnHover />
+      
       <iframe
         width="350"
         height="200"

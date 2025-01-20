@@ -1,10 +1,14 @@
 import { useForm } from "react-hook-form";
 import { createVideo } from "../services/videos.service";
 import { useStore } from "../store/store";
+import { toast, ToastContainer } from "react-toastify";
 
 const NewVideoPage = () => {
 
   const { dispatch } = useStore();
+
+  const successNotify = () => toast.success("Video creado con exito!");
+  const errorNotify = () => toast.error("Error al crear el video!");
   
   const {
     register,
@@ -26,15 +30,18 @@ const NewVideoPage = () => {
     try {
       const response = await createVideo(data);
       dispatch({ type: "CREATE_VIDEO", payload: response });
+      successNotify();
       console.log(response);
       reset();
     } catch (error) {
       console.log(error);
+      errorNotify();
     }
   };
 
   return (
     <div className="new-video__container">
+      <ToastContainer autoClose={5000} closeOnClick pauseOnHover />
       <h2>NUEVO VIDEO</h2>
       <p>Complete el formulario para crear una nueva tarjeta de video</p>
 

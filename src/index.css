@@ -126,6 +126,8 @@
   padding: 0 2rem;
 }
 
+
+/* custom category */
 .category__container {
   margin-block: 4rem;
 }
@@ -135,12 +137,15 @@
 }
 
 .category__videos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0 2rem;
+  place-content: center;
 }
 
 .video__container {
+  width: fit-content;
   background-color: var(--black);
   border-radius: 1rem;
   overflow: hidden;
@@ -340,7 +345,7 @@
 .form-field__container input::placeholder,
 .form-field__container textarea::placeholder {
   color: var(--white);
-  opacity: .4;
+  opacity: .2;
 }
 
 .form-field__container input:focus,
