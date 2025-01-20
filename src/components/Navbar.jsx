@@ -1,17 +1,22 @@
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom";
+import CustomButton from "./CustomButton";
 
 const Navbar = () => {
   return (
-    <header>
-      <div>
-        <h1>ALURAFLIX</h1>
-        <nav>
-          <Link href="/">Início</Link>
-          <Link href="/new-video">Filmes</Link>
+    <header className="header">
+      <div className="header__container">
+        <img src="/logo.png" alt="aluraflix logo" className="header__logo" />
+        <nav className="header__nav">
+          <NavLink to="/" className='btn btn--primary'>
+            HOME
+          </NavLink>
+          <NavLink to="/new-video" className='btn btn--primary'>
+            NUEVO VIDEO
+          </NavLink>
         </nav>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

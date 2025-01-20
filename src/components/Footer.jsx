@@ -1,9 +1,9 @@
 
 const Footer = () => {
   return (
-    <footer>
-      <div>
-        <img src="/logo.png" alt="aluraflix logo" />
+    <footer className="footer">
+      <div className="footer__container">
+        <img src="/logo.png" alt="aluraflix logo" className="footer__logo" />
       </div>
     </footer>
   )

@@ -1,6 +1,6 @@
-const CustomButton = ({ label, type, onclick, color }) => {
+const CustomButton = ({ label, type, onclick, color, active }) => {
   return (
-    <button type={type} className={`btn ${color}`} onClick={onclick}>
+    <button type={type} className={`btn ${color} ${active ? "active" : ""}`} onClick={onclick}>
       {label}
     </button>
   );
