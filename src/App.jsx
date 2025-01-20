@@ -13,7 +13,7 @@ const App = () => {
         console.log(data);
         dispatch({ type: "SET_DATA", payload: data });
       } catch (error) {
-        console.log(error);
+        console.log(error); 
       }
     };
 
@@ -21,7 +21,7 @@ const App = () => {
   }, []);
 
   if (!state.data) {
-    return <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+    return <div className="loading-fullscreen">
       <h1>Cargando...</h1>
     </div>;
   }

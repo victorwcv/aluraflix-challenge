@@ -1,8 +1,13 @@
 import { useForm } from "react-hook-form";
 import { FaXmark } from "react-icons/fa6";
+import { updateVideo } from "../services/videos.service";
+import { useStore } from "../store/store";
 
 
 const EditCardModal = ({ video, setShowModal }) => {
+
+  const { dispatch } = useStore();
+  
   const {
     register,
     handleSubmit,
@@ -10,21 +15,32 @@ const EditCardModal = ({ video, setShowModal }) => {
     reset
   } = useForm({
     defaultValues: {
+      id: video.id,
       title: video.title,
       category: video.category,
       image: video.image,
-      video: video.link,
+      video: video.video,
       description: video.description,
     },
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
-    setShowModal(false);
+  const onSubmit = async(formValues) => {
+
+    try {
+      const data = await updateVideo(formValues.id, formValues);
+      dispatch({ type: "UPDATE_VIDEO", payload: data });
+      console.log(data);
+      handleClearForm();
+    } catch (error) {
+      console.log(error);
+    }
   };
+
+  
 
   const handleClearForm = () => {
     reset({
+      id: video.id,
       title: "",
       category: "",
       image: "",

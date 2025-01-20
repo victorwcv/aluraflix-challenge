@@ -428,3 +428,15 @@
 .form-btn__container.new-video {
   align-items: end;
 } 
+
+/* loading fullscreen */
+
+.loading-fullscreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  color: var(--primary);
+  background-color: var(--dark);
+}

@@ -1,0 +1,68 @@
+{
+  "videos": [
+    {
+      "id": "1",
+      "title": "Cuando usar let, var y const?",
+      "category": "frontend",
+      "image": "https://img.youtube.com/vi/PztCEdIJITY/0.jpg",
+      "video": "https://www.youtube.com/embed/PztCEdIJITY?si=FvnlRASB0PCZHCkZ",
+      "description": "Descrição do vídeo 1"
+    },
+    {
+      "id": "3",
+      "title": "Equipo Front End",
+      "category": "frontend",
+      "image": "https://img.youtube.com/vi/PztCEdIJITY/0.jpg",
+      "video": "https://www.youtube.com/embed/rpvrLaBQwgg?si=hbmOZyq4fma3S-_s",
+      "description": "Describiendo el trabajo del equipo front end"
+    },
+    {
+      "id": "4",
+      "title": "Video 4",
+      "category": "backend",
+      "image": "https://img.youtube.com/vi/PztCEdIJITY/0.jpg",
+      "video": "https://www.youtube.com/embed/t-iqt1b2qqk?si=o2VWxmCjlo6VbAZY",
+      "description": "Descrição do vídeo 4"
+    },
+    {
+      "id": "5",
+      "title": "Video 5",
+      "category": "backend",
+      "image": "https://img.youtube.com/vi/PztCEdIJITY/0.jpg",
+      "video": "https://www.youtube.com/embed/cLLKVd5CNLc?si=sTLyv90VqdhGzheQ",
+      "description": "Descrição do vídeo 5"
+    },
+    {
+      "id": "6",
+      "title": "Video 6",
+      "category": "innovation_and_management",
+      "image": "https://img.youtube.com/vi/PztCEdIJITY/0.jpg",
+      "video": "https://www.youtube.com/embed/vhwspfvI52k?si=fsuhT5-_OEu3VM8A",
+      "description": "Descrição do vídeo 6"
+    },
+    {
+      "id": "7",
+      "title": "Video 7",
+      "category": "innovation_and_management",
+      "image": "https://img.youtube.com/vi/PztCEdIJITY/0.jpg",
+      "video": "https://www.youtube.com/embed/YhR7Zp8NUzE?si=hZpz7Fza8GN9StOu",
+      "description": "Descrição do vídeo 7"
+    },
+    {
+      "id": "3e3f5751-2fb5-4467-8f63-0eaf7653c484",
+      "title": "De JavaScript a TypeScript ",
+      "category": "frontend",
+      "image": "",
+      "video": "https://www.youtube.com/embed/BaRZEFHI-oY?si=K5VpKx0Rsxiatkut",
+      "description": "La evolucion que todo frontend necesita"
+    },
+    {
+      "id": "e832afa0-e0fc-4b68-8d15-979d6d64f391",
+      "title": "Mejora tu rendimiento con un buen descanso",
+      "category": "innovation_and_management",
+      "image": "",
+      "video": "https://www.youtube.com/embed/qSOM1DdvJt0?si=JfT_0G0R-AuXg7MY",
+      "description": "Porque el sueño es tan importante para aprender mejor"
+    }
+  ]
+}

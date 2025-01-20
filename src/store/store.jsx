@@ -13,6 +13,30 @@ const reducer = (state, action) => {
         ...state,
         data: action.payload,
       };
+
+      case "UPDATE_VIDEO":
+      return {
+        ...state,
+        data: state.data.map((video) => {
+          if (video.id === action.payload.id) {
+            return action.payload;
+          }
+          return video;
+        }),
+      };
+
+      case "DELETE_VIDEO":
+      return {
+        ...state,
+        data: state.data.filter((video) => video.id !== action.payload),
+      };
+
+      case "CREATE_VIDEO":
+      return {
+        ...state,
+        data: [...state.data, action.payload],
+      };
+    
     case "LOGOUT":
       return {
         ...state,

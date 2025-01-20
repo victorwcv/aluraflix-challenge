@@ -1,16 +1,36 @@
 import { useForm } from "react-hook-form";
+import { createVideo } from "../services/videos.service";
+import { useStore } from "../store/store";
 
 const NewVideoPage = () => {
+
+  const { dispatch } = useStore();
+  
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      id: crypto.randomUUID(),
+      title: "",
+      category: "",
+      image: "",
+      video: "",
+      description: "",
+    },
+  });
 
-  const onSubmit = (data) => {
-    console.log(data);
-    reset();
+  const onSubmit = async(data) => {
+    try {
+      const response = await createVideo(data);
+      dispatch({ type: "CREATE_VIDEO", payload: response });
+      console.log(response);
+      reset();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
