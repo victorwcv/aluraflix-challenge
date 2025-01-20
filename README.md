@@ -7,13 +7,13 @@ AluraFlix Challenge es un proyecto de desarrollo web de una SPA que simula una p
 Clonar el repositorio
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/victorwcv/aluraflix-challenge.git
 ```
 
 Ir al directorio del proyecto
 
 ```bash
-  cd my-project
+  cd aluraflix-challenge
 ```
 
 Instalar las dependencias
