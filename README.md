@@ -1,8 +1,36 @@
-# React + Vite
+# ALURAFLIX CHALLENGE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AluraFlix Challenge es un proyecto de desarrollo web de una SPA que simula una plataforma de streaming. Utilizando React en el frontend y JSON-Server para gestionar datos de manera sencilla, este proyecto permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre una lista de videos. Los usuarios pueden agregar nuevos videos, editar la información existente y eliminar registros. El proyecto destaca por su enfoque en la gestión de datos estáticos y la implementación de funcionalidades básicas de una plataforma de contenidos.
 
-Currently, two official plugins are available:
+## Ejecutar localmente
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Clonar el repositorio
+
+```bash
+  git clone https://link-to-project
+```
+
+Ir al directorio del proyecto
+
+```bash
+  cd my-project
+```
+
+Instalar las dependencias
+
+```bash
+  npm install
+```
+
+Iniciar el servidor de la app
+
+```bash
+  npm run dev
+```
+
+Iniciar json-server
+
+```bash
+  npm run server
+```
+
