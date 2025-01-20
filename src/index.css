@@ -167,14 +167,15 @@
 /* Custom Title Tag */
 
 .title-tag {
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
   color: var(--white);
   padding-block: 0.5rem;
   text-align: center;
   text-transform: uppercase;
-  width: 432px;
+  width: 400px;
+  border-radius: .5rem;
 }
 
 .title-tag.primary {

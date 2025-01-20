@@ -1,6 +1,10 @@
+import CustomCategory from "../components/CustomCategory";
+import CustomTitleTag from "../components/CustomTitleTag";
+
 const HomePage = () => {
   return (
     <div className="home-page__container">
+
       <section className="home-page__banner">
         <img src="/bg-banner.png" alt="banner" className="banner__img" />
         <div className="banner__content">
@@ -26,6 +30,18 @@ const HomePage = () => {
             ></iframe>
           </div>
         </div>
+      </section>
+
+      <section className="home-page__categories">
+        <CustomCategory>
+          <CustomTitleTag title="FRONT END" color="primary" />
+        </CustomCategory>
+        <CustomCategory>
+          <CustomTitleTag title="BACK END" color="secondary" />
+        </CustomCategory>
+        <CustomCategory>
+          <CustomTitleTag title="INNOVACIÓN Y GESTIÓN" color="tertiary" />
+        </CustomCategory>
       </section>
     </div>
   );
