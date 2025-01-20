@@ -68,7 +68,7 @@ const EditCardModal = ({ video, setShowModal }) => {
             <textarea {...register("description", { required: "Campo requerido" })} type="text" placeholder="Ejm: Este es el video de React..." />
             {errors.description && <p>{errors.description.message}</p>}
           </div>
-          <div className="edit-card-modal__buttons">
+          <div className="form-btn__container">
             <button type="submit">Guardar</button>
             <button type="button" onClick={handleClearForm}>Limpiar</button>
           </div>

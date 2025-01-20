@@ -307,10 +307,19 @@
 }
 
 .form-field__container {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   width: 100%;
+}
+
+.form-field__container p {
+  position: absolute;
+  top: 100%;
+  right: .5rem;
+  font-size: 0.8rem;
+  color: red;
 }
 
 .form-field__container label {
@@ -346,14 +355,15 @@
   height: 100px;
 }
 
-.edit-card-modal__buttons {
+.form-btn__container {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.edit-card-modal__buttons button {
+.form-btn__container button {
   padding: .5rem 1rem;
   border-radius: .5rem;
   border: 2px solid var(--secondary);
@@ -364,7 +374,7 @@
   color: var(--secondary);
 }
 
-.edit-card-modal__buttons button:hover {
+.form-btn__container button:hover {
   box-shadow: 0 0 10px var(--white);
   color: var(--white);
   border: 2px solid var(--white);
@@ -373,3 +383,48 @@
 .form-field__container select option {
   color: var(--black);
 }
+
+
+/* New Video Page */
+
+.new-video__container {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.new-video__container h2 {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: .2rem;
+}
+
+.new-video__container p {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.new-video__container h3 {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--secondary);
+}
+
+.new-video__form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 4rem;
+  padding: 4rem;
+}
+
+.form-field__container.new-video input,
+.form-field__container.new-video select,
+.form-field__container.new-video textarea {
+  border: 1px solid #3f3f3f;
+}
+
+.form-btn__container.new-video {
+  align-items: end;
+} 
